@@ -16,13 +16,19 @@ return {
   opts = {
     filesystem = {
       filtered_items = {
-        hide_dotfiles = false,
+        visible = false,
+        hide_dotfiles = true,
         hide_gitignored = false,
-        hide_by_name = {
+        never_show = {
           '.git',
           '.github',
+          'node_modules',
           '.DS_Store',
           'thumbs.db',
+        },
+        always_show = {
+          '.gitignore',
+          '.stylua.toml',
         },
       },
       window = {
